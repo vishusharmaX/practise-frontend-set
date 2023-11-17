@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=
+    , initial-scale=1.0" />
+    <title>Myntra Site</title>
+
+    <style>
+        button {
+            background: lightseagreen;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" onclick="cartQuantity = cartQuantity + 1 ;
+    document.querySelector('#cart-summary').innerText= `Your Bag has  ${cartQuantity}  items`;">
+        Add to Bag
+    </button>
+    <button class="btn" onclick="cartQuantity = cartQuantity - 1;
+    document.querySelector('#cart-summary').innerText= `Your Bag has  ${cartQuantity}  items`;">
+        Move to Wishlist
+    </button>
+    <button class="btn" onclick="cartQuantity = cartQuantity + 2;
+    document.querySelector('#cart-summary').innerText= `Your Bag has  ${cartQuantity}  items`;">
+        Sale 1+1 item
+    </button>
+    <h1 class="my-name"></h1>
+    <h1 id="cart-summary"></h1>
+    <script>
+        // let cartQuantity = 0;
+        // document.querySelector(
+        //   "#cart-summary"
+        // ).innerText = `Your Bag has  ${cartQuantity}  items`;
+
+        const Name = "Vishwajeet Sharma";
+        console.log(Name);
+        document.querySelector('.my-name').innerText = Name;
+    </script>
+</body>
+
+</html>

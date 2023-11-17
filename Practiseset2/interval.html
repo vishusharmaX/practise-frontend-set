@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="my-button">Clicked Me</button>
+    <script>
+        // let timer = setTimeout(() => {
+        //     console.log("Hello world!");
+        // }, 2000);
+        // clearTimeout(timer);
+        // console.log("Hello world 1!");
+
+        // let alaram = setInterval(() => {
+        //     console.log(`Uth jao Sab ke sab ${new Date()}`);
+        // }, 1000);
+        // setTimeout(() => clearInterval(alaram), 2000);
+        // console.log("heloo Kaise ho bhaii Log");
+
+        // let button = document.querySelector("#my-button");
+        // button.addEventListener("mouseenter", function () {
+        //     button.style.color = "red";
+        //     button.style.fontSize = "100px";
+        //     button.style.backgroundColor = "lightgreen";
+        // });
+        // button.addEventListener("mouseleave", function () {
+        //     button.style.color = "blue";
+        //     button.style.fontSize = "50px";
+        //     button.style.backgroundColor = "";
+        // });
+
+        //foreach Loop 
+
+        let foods = ['breads', 'apple', 'orange', 'banana'];
+
+        // foods.forEach(function (food) {
+        //     console.log(food);
+        // });
+        let arr = [3, 5, 7, 9];
+
+        function search(arr, num) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == num) {
+                    console.log(`element found at : ${i}`);
+                    return;
+                }
+            }
+            console.log('Element not found');
+        }
+
+        search(arr, 5);
+    </script>
+</body>
+
+</html>

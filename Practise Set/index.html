@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Set Exercise</title>
+
+    <style>
+        .odd {
+            background-color: rgb(229, 127, 255);
+        }
+
+        .even {
+            background-color: lightseagreen;
+        }
+
+        .btn {
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="greeting"></h3>
+    <button onclick="getClicked()" class="btn"></button>
+    <button onclick="localStorage.clear() ; resetbtn();" class="btn">Reset</button>
+    <script>
+        let nooftime = localStorage.getItem('btnclick') || 0;
+
+        function getClicked() {
+            nooftime++;
+            localStorage.setItem('btnclick', nooftime);
+            updateBtn();
+        }
+
+        function resetbtn() {
+            nooftime = 0;
+            let button = document.querySelector('.btn');
+            button.innerText = nooftime;
+        }
+
+        function updateBtn() {
+            let button = document.querySelector('.btn');
+            button.innerText = nooftime;
+            if (nooftime % 2 == 0 || nooftime == 0) {
+                button.classList.remove('odd');
+                button.classList.add('even');
+            } else {
+                button.classList.remove('even');
+                button.classList.add('odd');
+
+            }
+        }
+        updateBtn();
+
+
+
+        let date = new Date();
+        let hours = date.getHours();
+        let heading = document.querySelector('#greeting');
+        if (hours > 5 && hours < 12) {
+            heading.innerText = "Good Morning";
+        }
+        if (hours > 12 && hours < 18) {
+            heading.innerText = "Good AfterNoon";
+        } else {
+            heading.innerText = "Good Night";
+        }
+
+
+        console.log(date);
+    </script>
+</body>
+
+</html>

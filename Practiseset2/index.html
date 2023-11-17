@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bat Ball Stump</h1>
+    <button onclick="
+       const userMsg = 'You have Choosen to bat';
+    let computerChoice = getComputerChoice();
+
+
+        let resultMsg = getResult(computerChoice);
+        
+         const computerMsg = `Computer Choice is
+         ${computerChoice}`
+        alert(`${userMsg} ${computerMsg} ${resultMsg}`);
+    ">
+        Bat
+    </button>
+    <button onclick="
+    
+    ">
+        Ball
+    </button>
+    <button>Stump</button>
+
+    <script>
+        function getComputerChoice() {
+            let randomNumber = Math.random() * 3;
+            let computerChoice;
+            if (randomNumber > 0 && randomNumber <= 1) {
+                computerChoice = 'Bat';
+            } else if (randomNumber > 1 && randomNumber <=
+                2) {
+                computerChoice = 'Ball';
+            } else {
+                computerChoice = 'Stump';
+            }
+
+
+            return computerChoice;
+        }
+
+        function getResult(computerChoice) {
+            if (computerChoice === 'Ball') {
+                return 'User Won';
+            }
+            if (computerChoice === 'Bat') {
+                return 'Its is a Tie';
+            }
+            if (computerChoice === 'Stump') {
+                return 'User Lost';
+            }
+        }
+    </script>
+</body>
+
+</html>
